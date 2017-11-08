@@ -414,7 +414,7 @@
     <script>
         $(document).ready(function() {
           $('#contributors-table').DataTable( {
-            "ajax": './colaboradores',
+            "ajax": './colaboradores/colaboradores',
             "columns": [
                 { "data": "name" },
                 { "data": "surname" },
@@ -432,7 +432,7 @@
 
           $( "#colaboradorFrm" ).submit(function( event ) {            
             $.ajax({
-                url: './colaboradores',
+                url: './colaboradores/colaborador',
                 type: 'post',
                 data: $('#colaboradorFrm').serialize(),
                 success: function(data) {
